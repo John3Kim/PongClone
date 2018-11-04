@@ -1,10 +1,23 @@
 class Paddle{ 
+    
+   private float xPosPaddle;
+  
+   Paddle(float xPosPaddle){ 
+     this.xPosPaddle = xPosPaddle;
+   }
    
-   Paddle(){ 
-   } 
+   float getX(){ 
+     return xPosPaddle; 
+   }
+   
+   float getY(){ 
+     return mouseY;
+   }
+   
+
    
    void displayPaddle(){ 
-      rect(width/25,mouseY,width/25,height/7); 
+      rect(xPosPaddle,mouseY,width/25,height/7); 
    }
   
   

@@ -13,7 +13,7 @@
 */ 
 
 Ball ball; 
-Paddle paddle = new Paddle();
+Paddle paddle;
 
 
 float xBall; 
@@ -29,18 +29,31 @@ void setup(){
  
   xBall = width/90;
   yBall = height/2;
-  ball = new Ball(xBall,yBall);
+  ball = new Ball(xBall,yBall,velocityBall);
+  paddle = new Paddle(width/25);
 }
 
 void draw(){ 
    background(0);
    // Make the lines for the middle of the screen
-   for(int i = 0; i <= height/25; i++){ 
+   for(int i = 0; i <= height; i++){ 
      rect(width/2,height/50*(3*i),width/80,height/25); 
    } 
    
+   paddle.displayPaddle();
+   //print(paddle.getX()); 
+   print(paddle.getY());
    ball.displayBall();
-   ball.updatePos();
-
+   ball.updatePos(); 
+   
+   /*
+   // Check for the position of the X and Y coords of the ball 
+   // and check if they touch the paddle 
+   if(paddle.getY()+height/14 == ball.getXPos()){ 
+    //Go back! 
+    ball.setVelocityX(-ball.getXPos());
+    
+   }
+  */
 
 } 
