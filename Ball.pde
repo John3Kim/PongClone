@@ -1,46 +1,73 @@
+/* Ball.pde 
+* Description: All the features that your ball needs 
+* to be able to enjoy a nice game of Pong!
+* 
+*/
 public class Ball{ 
+ 
   private float posX; 
   private float posY; 
-  private float velocityX = 6;
+  private float velocityX;
+  private float velocityY = 0;
   
-  Ball(float posX,float posY, float velocityX){
+  private float ballLength = width/60;
+  //private float velocityY = 1;
+
+  Ball(float posX,float posY, float velocity){
     this.posX = posX;
     this.posY = posY; 
-    this.velocityX = velocityX;
+    this.velocityX = velocity;
   } 
+
   
-  float getXPos(){ 
+  float getX(){ 
     return posX; 
   }
   
-  float getYPos(){ 
+  float getY(){ 
    return posY; 
   }
   
-  void setPosX(float pX){ 
+  void setX(float pX){ 
     posX = pX; 
   }
   
-  void setPosY(float pY){ 
+  void setY(float pY){ 
     posY = pY; 
+  }
+  
+  float getVelocityX(){ 
+    return velocityX;
   }
   
   void setVelocityX(float veloX){ 
     velocityX = veloX;
   }
   
+  /*
+  void setVelocityY(float veloY){ 
+    velocityY = veloY;
+  }*/
+  
   void displayBall(){ 
      fill(255);
-     rect(posX,posY,width/60,width/60); 
+     rect(posX,posY,ballLength,ballLength); 
   } 
   
-  void updatePos(){ 
+  void updateXPos(){ 
    posX = posX + velocityX;
    
    if(posX > width || posX < 0){
       velocityX = -velocityX; 
-   }
+   } 
+  } 
+  
+  void updateYPos(){ 
+   posY = posY + velocityY;
    
+   if(posY > height || posY < 0){
+      velocityY = -velocityY; 
+   } 
   } 
   
 

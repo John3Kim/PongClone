@@ -1,24 +1,16 @@
-class Paddle{ 
-    
-   private float xPosPaddle;
-  
-   Paddle(float xPosPaddle){ 
-     this.xPosPaddle = xPosPaddle;
-   }
-   
-   float getX(){ 
-     return xPosPaddle; 
-   }
-   
-   float getY(){ 
-     return mouseY;
-   }
-   
+/* Paddle.pde
+* Description:  Some useful methods to put for 
+* the player(s) and the opponent.
+* 
+* 
+*/
 
+abstract class Paddle{ 
    
-   void displayPaddle(){ 
-      rect(xPosPaddle,mouseY,width/25,height/7); 
-   }
-  
+   abstract float getX();
+   abstract float getY();
+   
+   abstract void displayPaddle();
+   //abstract boolean collision();
   
 }
