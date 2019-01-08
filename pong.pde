@@ -5,9 +5,11 @@
 *
 * TODO: 
 * - Find a way for the ball the hit the paddle DONE!
-* - Learn how to implement the physics in Pong
+* - Learn how to implement the physics in Pong 
+*   - This involves making the ball move based on the which part of 
+      the paddle the ball hits
 * - Implement a second paddle as an opponent 
-* - Put a nice score keeping system! 
+* - Put a nice score keeping system! DONE!
 * - Make a menu for the game! 
 * - Profit! $$$
 */ 
@@ -19,7 +21,7 @@ PFont scoreFont;
 
 float xBall; 
 float yBall;
-float velocityBall = 4;
+float velocityBall = 25;
 
 void setup(){ 
 
@@ -54,7 +56,7 @@ void draw(){
    ball.updateXPos(); 
    ball.updateYPos();
    
-   collisionDetection();
+   collision1Detection();
    
    scoreUpdate();
    displayScore();
@@ -63,7 +65,7 @@ void draw(){
 } 
 
 // Player1 collision detection
-void collisionDetection(){ 
+void collision1Detection(){ 
    // Check for the position of the X and Y coords of the ball 
    // and check if they touch the paddle 
    float player1UpperLen = mouseY + 720/20; 
@@ -74,10 +76,24 @@ void collisionDetection(){
    boolean collisionY = ball.getY() <= player1UpperLen && ball.getY() >= player1LowerLen;
   
   if(collisionX && collisionY){ 
-    //Go the other direction
+    // Partition collisions from the centre
+    //Go the other direction if the ball hits the centre
     ball.setVelocityX(-ball.getVelocityX());
     
     // Let's make three cases for the top half and the bottom half of the paddle
+    // Case 1: Ball hits the top half of the paddle
+    // Lower top
+    collisionY = 
+    if(collision
+    
+    // Middle top 
+    // Upper top
+    
+    // Case 2: Ball hits the bottom half of the paddle
+    // Upper bottom
+    // Middle bottom
+    // Lower bottom
+
   }
   
 } 

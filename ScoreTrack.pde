@@ -1,3 +1,9 @@
+/* Paddle.pde
+* Description:  Tracks the score of the
+* game
+* 
+*/
+
 class ScoreTrack{
    private int[] score = new int[]{0,0}; 
    
