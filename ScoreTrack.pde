@@ -1,6 +1,6 @@
-/* Paddle.pde
-* Description:  Tracks the score of the
-* game
+/* ScoreTrack.pde
+* Description:  Tracks the score of the game
+* 
 * 
 */
 

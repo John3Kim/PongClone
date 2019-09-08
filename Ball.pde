@@ -40,20 +40,25 @@ public class Ball{
     return velocityX;
   }
   
+  float getVelocityY(){ 
+    return velocityY;
+  }
+  
   void setVelocityX(float veloX){ 
     velocityX = veloX;
   }
   
-  /*
+  
   void setVelocityY(float veloY){ 
     velocityY = veloY;
-  }*/
+  }
   
   void displayBall(){ 
      fill(255);
      rect(posX,posY,ballLength,ballLength); 
   } 
   
+  /*  Below we use the update to detect collision to paddle*/
   void updateXPos(){ 
    posX = posX + velocityX;
    
