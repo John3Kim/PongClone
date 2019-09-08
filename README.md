@@ -6,6 +6,4 @@ into the mood of creating simple games using Processing.
 This is currently a work in progress as some of the features have not been implemented.  
 
 So far, some of the things that need to be done include: 
--> Adding an opponent 
--> Modifying the physics so that the ball can be moved diagonally 
--> Adding some UI elements such as menus and high scores
+* Adding some UI elements such as menus and high scores
