@@ -5,17 +5,14 @@
 */
 public class Ball{ 
  
-  private float posX; 
-  private float posY; 
+  private float posX = width/8; 
+  private float posY = height/2; 
   private float velocityX;
   private float velocityY = 0;
   
   private float ballLength = width/60;
-  //private float velocityY = 1;
 
-  Ball(float posX,float posY, float velocity){
-    this.posX = posX;
-    this.posY = posY; 
+  Ball(float velocity){ 
     this.velocityX = velocity;
   } 
 
@@ -53,12 +50,13 @@ public class Ball{
     velocityY = veloY;
   }
   
+    
   void displayBall(){ 
      fill(255);
      rect(posX,posY,ballLength,ballLength); 
   } 
   
-  /*  Below we use the update to detect collision to paddle*/
+  /*  Below we use the update to detect collision of the ball and the walls*/
   void updateXPos(){ 
    posX = posX + velocityX;
    

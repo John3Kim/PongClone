@@ -39,7 +39,6 @@ class Opponent extends Paddle {
    }
    
    void displayPaddle(){ 
-      //rect(xPosPaddle,mouseY,width/25,height/7); 
       rect(xPosPaddle,yPosPaddle,paddleLen,paddleWide); 
    }
   
@@ -47,4 +46,41 @@ class Opponent extends Paddle {
   void updateYPos(){ 
     yPosPaddle = yPosPaddle + velocityY;
   }
+  
+  void collisionDetectionOpponent(Ball ball){ 
+   // Check for the position of the X and Y coords of the ball 
+   // and check if they touch the paddle 
+   float opponentUpperLen = yPosPaddle + width/20; 
+   float opponentLowerLen = yPosPaddle - width/20;
+   float opponentLeftWide =  xPosPaddle - height/28;
+   float opponentRightWide = xPosPaddle + height/28;
+   boolean collisionX = ball.getX() <= opponentRightWide && ball.getX() >= opponentLeftWide; 
+   boolean collisionY = ball.getY() <= opponentUpperLen && ball.getY() >= opponentLowerLen;
+  
+  // So far we have it such that it goes in the opposing direction
+  if(collisionX && collisionY){ 
+    // Partition collisions from the centre
+    
+    //Centre of the paddle
+     if(ball.getY() == yPosPaddle){
+      
+       ball.setVelocityX(-ball.getVelocityX());
+       ball.setVelocityY(0);
+     
+     // Bottom half of paddle
+     }else if(ball.getY() > yPosPaddle && ball.getY() <= opponentUpperLen){
+       
+       ball.setVelocityX(-ball.getVelocityX());
+       ball.setVelocityY(yPosPaddle/50);
+     
+     //Top half of paddle
+     }else if(ball.getY() < yPosPaddle && ball.getY() >= opponentLowerLen){ 
+       
+       ball.setVelocityX(-ball.getVelocityX());
+       ball.setVelocityY(-yPosPaddle/50);
+     }
+    
+  }
+  
+} 
 }
