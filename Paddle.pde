@@ -9,8 +9,6 @@ abstract class Paddle{
    
    abstract float getX();
    abstract float getY();
-   
    abstract void displayPaddle();
-   //abstract boolean collision();
-  
+ 
 }

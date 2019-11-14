@@ -11,7 +11,6 @@ Ball ball;
 Player player;
 Opponent opponent;
 ScoreBoard st;
-PFont scoreFont;
 
 float xBall; 
 float yBall;
@@ -24,9 +23,8 @@ void setup(){
   surface.setResizable(true);
   rectMode(CENTER);
  
-  xBall = 720/90 + 100;
-  yBall = 480/2;
-  //ball = new Ball(xBall,yBall,velocityBall);
+  xBall = width/90 + 100;
+  yBall = height/2;
   ball = new Ball(velocityBall);
   
   player = new Player(width/25);
@@ -68,7 +66,6 @@ void draw(){
    
 } 
 
-
 //Event that will initiate ball
 void mouseClicked(){ 
   if(!ballMotion){ 
@@ -76,7 +73,7 @@ void mouseClicked(){
   }
 }
 
-// Console printout each X and Y coordinates
+//  Print out X and Y coordinates
 void debugPosition(){ 
    //print("PlayerX: " + player.getX() + "\n");
    //print("PlayerY: " + player.getY() + "\n"); 

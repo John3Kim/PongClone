@@ -6,6 +6,7 @@
 
 class ScoreBoard{
    private int[] score = new int[]{0,0}; 
+   private PFont scoreFont;
    
    ScoreBoard(){ 
      

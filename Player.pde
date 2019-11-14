@@ -1,6 +1,10 @@
 /* Player.pde
+<<<<<<< HEAD
 * Description: A Basic class for the player class. 
-* Implements Player1 and possibly Player2/CPU.
+=======
+* Description: The player class. 
+>>>>>>> 774128f194ee5ef354c86a5fb72025d49663e333
+* Implements Player1 and possibly Player2.
 * 
 * 
 */
@@ -25,7 +29,6 @@ class Player extends Paddle{
    }
    
    void displayPaddle(){ 
-      //rect(xPosPaddle,mouseY,width/25,height/7); 
       rect(xPosPaddle,mouseY,paddleLen,paddleWide); 
    }
    
@@ -40,7 +43,6 @@ class Player extends Paddle{
        boolean collisionX = ball.getX() <= playerRightWide && ball.getX() >= playerLeftWide; 
        boolean collisionY = ball.getY() <= playerUpperLen && ball.getY() >= playerLowerLen;
       
-      // So far we have it such that it goes in the opposing direction
       if(collisionX && collisionY){ 
         // Partition collisions from the centre
         

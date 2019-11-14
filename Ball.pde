@@ -56,7 +56,7 @@ public class Ball{
      rect(posX,posY,ballLength,ballLength); 
   } 
   
-  /*  Below we use the update to detect collision of the ball and the walls*/
+  /*  Below we use the update function to detect collision of the ball and the walls*/
   void updateXPos(){ 
    posX = posX + velocityX;
    

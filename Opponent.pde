@@ -1,5 +1,5 @@
 /* Opponent.pde
-* Description:  Makes an oppointment to play with
+* Description:  Allow us to play with a computer.
 * 
 * 
 * 
@@ -57,7 +57,6 @@ class Opponent extends Paddle {
    boolean collisionX = ball.getX() <= opponentRightWide && ball.getX() >= opponentLeftWide; 
    boolean collisionY = ball.getY() <= opponentUpperLen && ball.getY() >= opponentLowerLen;
   
-  // So far we have it such that it goes in the opposing direction
   if(collisionX && collisionY){ 
     // Partition collisions from the centre
     
