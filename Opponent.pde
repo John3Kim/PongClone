@@ -1,5 +1,5 @@
 /* Opponent.pde
-* Description:  Makes an oppointment to play with
+* Description:  Allow us to play with a computer.
 * 
 * 
 * 
