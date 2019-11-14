@@ -1,9 +1,5 @@
 /* Player.pde
-<<<<<<< HEAD
-* Description: A Basic class for the player class. 
-=======
 * Description: The player class. 
->>>>>>> 774128f194ee5ef354c86a5fb72025d49663e333
 * Implements Player1 and possibly Player2.
 * 
 * 
