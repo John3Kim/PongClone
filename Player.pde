@@ -1,6 +1,6 @@
 /* Player.pde
-* Description: A Basic class for the player class. 
-* Implements Player1 and possibly Player2/CPU.
+* Description: The player class. 
+* Implements Player1 and possibly Player2.
 * 
 * 
 */
